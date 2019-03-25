@@ -631,12 +631,12 @@ interface JestExpectType {
   toBeUndefined(): void;
   /**
    * Use .toContain when you want to check that an item is in a list. For
-   * testing the items in the list, this uses ===, a strict equality check.
+   * testing the itemsId in the list, this uses ===, a strict equality check.
    */
   toContain(item: any): void;
   /**
    * Use .toContainEqual when you want to check that an item is in a list. For
-   * testing the items in the list, this matcher recursively checks the
+   * testing the itemsId in the list, this matcher recursively checks the
    * equality of all fields, rather than checking for object identity.
    */
   toContainEqual(item: any): void;
