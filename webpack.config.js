@@ -19,12 +19,10 @@ module.exports = (env, options) => {
         mode,
         output: {
             path: PATHS.dist,
-            // filename: '[name].bundle.js',
-            // chunkFilename: '[name].bundle.js',
-            filename: 'bundle.js',
+            filename: '[name].[hash:8].bundle.js',
+            chunkFilename: '[name].[hash:8].bundle.js',
             publicPath: '/'
         },
-
         module: {
             rules: [
                 {
@@ -41,14 +39,7 @@ module.exports = (env, options) => {
                             }
                         }
                     ],
-                    exclude: /(node_modules|bower_components)/,
-                },
-                {
-                    test: /\.(js|mjs|jsx|ts|tsx)$/,
-                    exclude: /(node_modules|bower_components)/,
-                    use: {
-                        loader: 'babel-loader'
-                    }
+                    exclude: /(node_modules|bower_components)/
                 },
                 {
                     test: /\.css$/,
@@ -128,13 +119,6 @@ module.exports = (env, options) => {
                 }),
                 new OptimizeCSSAssetsPlugin({})
             ]
-            // ,
-            // splitChunks: {
-            //     chunks: 'all',
-            //     name: false
-            // },
-            //
-            // runtimeChunk: true
         },
 
         stats: {
@@ -143,6 +127,7 @@ module.exports = (env, options) => {
         },
 
         devServer: {
+            open: true,
             overlay: true,
             hot: true,
             contentBase: PATHS.dist,
