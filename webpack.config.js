@@ -3,6 +3,8 @@ const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 const PATHS = {
     src: path.join(__dirname, './src'),
@@ -21,7 +23,7 @@ module.exports = (env, options) => {
             path: PATHS.dist,
             filename: '[name].[hash:8].bundle.js',
             chunkFilename: '[name].[hash:8].bundle.js',
-            publicPath: './'
+            publicPath: isEnvProduction ? './' : '/'
         },
         module: {
             rules: [
@@ -88,7 +90,13 @@ module.exports = (env, options) => {
             new HtmlWebpackPlugin({
                 title: 'Shopper',
                 template: 'static/indexTemplate.html'
-            })
+            }),
+            new CopyPlugin([
+                {
+                    from: 'static/favicon.png'
+                }
+            ]),
+            new CleanWebpackPlugin()
         ],
 
         optimization: {
