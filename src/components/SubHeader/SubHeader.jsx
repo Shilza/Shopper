@@ -14,7 +14,7 @@ const StyledSubHeader = styled.nav`
 const SubHeader = () => (
     <StyledSubHeader>
         <SubHeaderList />
-        {(IndexPageStore.isHoverListItem || IndexPageStore.isHoverMenu) && (
+        {(IndexPageStore.isHoverListItem || IndexPageStore.isMenuShown) && (
             <SubMenu />
         )}
     </StyledSubHeader>

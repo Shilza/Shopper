@@ -26,11 +26,11 @@ const Container = styled.div`
 
 const SubMenu = () => {
     const enableSubMenu = () => {
-        IndexPageStore.isHoverMenu = true;
+        IndexPageStore.setIsMenuShown(true);
     };
 
     const disableSubMenu = () => {
-        IndexPageStore.isHoverMenu = false;
+        IndexPageStore.setIsMenuShown(false);
     };
 
     return (

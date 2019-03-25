@@ -11,12 +11,12 @@ type PropTypes = {
 };
 
 const ListItem = ({ children, title }: PropTypes) => {
-    const [hoverRef, isHovered] = useHover();
+    const [listItemRef, isHovered] = useHover();
 
     IndexPageStore.setIsHovered(isHovered);
-    if (isHovered) IndexPageStore.displayedComponent = children;
+    if (isHovered) IndexPageStore.setDisplayedComponent(children);
 
-    return <StyledListItem ref={hoverRef}>{title}</StyledListItem>;
+    return <StyledListItem ref={listItemRef}>{title}</StyledListItem>;
 };
 
 export default ListItem;

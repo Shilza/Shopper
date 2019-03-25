@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Scroll from 'react-scroll';
+import { Link } from 'react-router-dom';
 import StyledListItem from './StyledListItem';
 import ListItem from './ListItem';
 import CollectionSubMenu from './Collections/CollectionSubMenu';
@@ -16,7 +17,16 @@ const List = styled.ul`
     width: 80%;
     display: flex;
     justify-content: space-evenly;
-    color: rgba(0, 0, 0, 0.6);
+    color: gray;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+`;
+
+const New = styled(Link)`
+    text-decoration: none;
+    outline: none;
 `;
 
 const SubHeaderList = () => {
@@ -30,7 +40,9 @@ const SubHeaderList = () => {
 
     return (
         <List>
-            <StyledListItem>New</StyledListItem>
+            <StyledListItem>
+                <New to="/new">New</New>
+            </StyledListItem>
             <ListItem title="Collections">
                 <CollectionSubMenu />
             </ListItem>
