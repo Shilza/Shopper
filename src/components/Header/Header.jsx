@@ -1,29 +1,59 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import MediaQuery from 'react-responsive';
+import { Drawer } from 'react-pretty-drawer';
+import { observer } from 'mobx-react-lite';
 import GenderSwitch from './GenderSwitch';
 import RightMenu from './RightMenu';
+import LogoLink from './LogoLink';
+import Nav from '../Icons/Nav/Nav';
+import DrawerStore from '../../models/DrawerStore';
+import SideMenu from '../../pages/Index/SideMenu';
+import WishListButton from './WishListButton';
 
 const StyledHeader = styled.div`
+    padding: 15px;
+    background: white;
+    border-bottom: 1px solid #efefef;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 10px 12px 15px;
-    border-bottom: 1px solid #efefef;
 `;
 
-const LogoLink = styled(Link)`
-    text-decoration: none;
-    color: black;
-    cursor: pointer;
-`;
+const Header = () => {
+    const closeDrawer = () => {
+        DrawerStore.setOpen(false);
+    };
+    return (
+        <StyledHeader>
+            <MediaQuery maxWidth={768}>
+                <Nav />
+                <Drawer
+                    closable
+                    width="80%"
+                    visible={DrawerStore.open}
+                    onClose={closeDrawer}
+                >
+                    <SideMenu />
+                </Drawer>
+            </MediaQuery>
+            <MediaQuery minWidth={769}>
+                <GenderSwitch />
+            </MediaQuery>
+            <LogoLink />
+            <MediaQuery minWidth={769}>
+                <RightMenu />
+            </MediaQuery>
+            <MediaQuery maxWidth={768}>
+                <WishListButton />
+            </MediaQuery>
+        </StyledHeader>
+    );
+};
 
-const Header = () => (
-    <StyledHeader>
-        <GenderSwitch />
-        <LogoLink to={window.location}>Shopper</LogoLink>
-        <RightMenu />
-    </StyledHeader>
-);
-
-export default Header;
+export default observer(Header);

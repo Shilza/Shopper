@@ -1,20 +1,23 @@
-import styled from 'styled-components';
 import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
-const GenderSwitchContainer = styled.ul`
+const GenderSwitchContainer = styled.div`
     font-size: 0.9em;
     text-transform: uppercase;
     padding: 0;
     margin: 0;
 `;
 
-const SwitchItem = styled.li`
+const SwitchItem = styled(Link)`
     display: inline;
     padding: 3px;
     cursor: pointer;
     list-style-type: none;
     color: gray;
     transition: 200ms;
+    text-decoration: none;
+    outline: none;
    
    :hover {
     color: black;
@@ -32,8 +35,8 @@ const SwitchItem = styled.li`
 
 const GenderSwitch = () => (
     <GenderSwitchContainer>
-        <SwitchItem>Woman</SwitchItem>
-        <SwitchItem>Man</SwitchItem>
+        <SwitchItem to="/women">Women</SwitchItem>
+        <SwitchItem to="/men">Men</SwitchItem>
     </GenderSwitchContainer>
 );
 

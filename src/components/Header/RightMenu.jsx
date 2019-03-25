@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Card from '../Icons/Card';
-import Heart from '../Icons/Heart';
 import SearchBar from './SearchBar';
+import WishListButton from './WishListButton';
 
 const StyledRightMenu = styled.div`
     display: flex;
@@ -18,7 +18,7 @@ const StyledRightMenu = styled.div`
 const RightMenu = () => (
     <StyledRightMenu>
         <SearchBar />
-        <Heart />
+        <WishListButton />
         <Card />
     </StyledRightMenu>
 );
