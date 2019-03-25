@@ -6,6 +6,7 @@ const AbstractButton = styled.button`
     outline: 0;
     height: 6%;
     min-height: 30px;
+    min-width: 180px;
     transition: 0.5s;
 
     @media (max-width: 768px) {

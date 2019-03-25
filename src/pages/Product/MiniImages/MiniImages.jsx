@@ -19,6 +19,7 @@ const Container = styled.div`
         height: 100px;
         overflow-x: scroll;
         width: 100%;
+        box-sizing: border-box;
 
         &::-webkit-scrollbar {
             width: 0;

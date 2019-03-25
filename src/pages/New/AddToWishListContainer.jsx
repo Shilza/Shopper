@@ -17,7 +17,7 @@ const Container = styled.div`
 `;
 
 const AddToWishListButton = styled.button`
-    margin: 0 0 32px;
+    margin: 0 0 26px;
     border: 0;
     outline: none;
     cursor: pointer;

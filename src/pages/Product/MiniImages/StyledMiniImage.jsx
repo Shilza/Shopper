@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 const StyledMiniImage = styled.img`
-    background: gray;
     width: 50%;
     height: 60%;
     margin-bottom: 30px;

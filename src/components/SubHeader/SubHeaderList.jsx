@@ -27,6 +27,11 @@ const List = styled.ul`
 const New = styled(Link)`
     text-decoration: none;
     outline: none;
+    color: black;
+
+    &:active {
+        color: black;
+    }
 `;
 
 const SubHeaderList = () => {

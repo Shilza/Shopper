@@ -18,6 +18,7 @@ const StyledSlider = styled.div`
     &::-webkit-scrollbar {
         width: 0;
     }
+    scrollbar-width: none;
 `;
 
 const SliderSection = styled.section`

@@ -12,6 +12,7 @@ const Container = styled.div`
     display: flex;
     justify-content: space-evenly;
     max-width: 1600px;
+    width: 70%;
     margin: auto;
     padding: 25px;
 
@@ -19,6 +20,7 @@ const Container = styled.div`
         display: flex;
         flex-direction: column;
         padding: 0;
+        width: 100%;
     }
 `;
 
