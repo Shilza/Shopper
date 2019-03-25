@@ -1,23 +1,27 @@
 {
-  "name": "shopper",
+  "name": "Shopper",
   "version": "1.0.0",
   "description": "Shopper custom configuration project",
   "main": "index.js",
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.3.4",
     "@babel/plugin-proposal-decorators": "^7.3.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/preset-flow": "^7.0.0",
     "autoprefixer": "^9.4.10",
     "babel-loader": "^8.0.5",
     "babel-plugin-transform-decorators-legacy": "^1.3.5",
     "babel-preset-flow": "^6.23.0",
     "css-mqpacker": "^7.0.0",
+    "css-scroll-snap-polyfill": "^0.1.2",
     "flow-typed": "^2.5.1",
     "mobx": "^5.9.0",
     "mobx-react-lite": "^1.1.0",
     "optionator": "^0.8.2",
     "react": "^16.8.3",
+    "react-addons-css-transition-group": "^15.6.2",
     "react-dom": "^16.8.3",
+    "react-pretty-drawer": "^0.2.0",
     "react-responsive": "^6.1.1",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
@@ -32,8 +36,6 @@
     "babel-jest": "^24.1.0",
     "css-loader": "^2.1.0",
     "cssnano": "^4.1.10",
-    "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.10.0",
     "eslint": "^5.14.1",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-config-prettier": "^4.1.0",
@@ -45,6 +47,7 @@
     "eslint-plugin-react": "^7.12.4",
     "flow-bin": "^0.93.0",
     "flow-webpack-plugin": "^1.2.0",
+    "gh-pages": "^2.0.1",
     "html-webpack-plugin": "^3.2.0",
     "husky": "^1.3.1",
     "jest": "^24.1.0",
@@ -54,6 +57,7 @@
     "postcss-loader": "^3.0.0",
     "prettier": "^1.16.4",
     "react-test-renderer": "^16.8.3",
+    "react-testing-library": "^6.0.0",
     "style-loader": "^0.23.1",
     "terser-webpack-plugin": "^1.2.3",
     "webpack": "^4.29.5",
@@ -69,7 +73,8 @@
     "flow:status": "flow status --quiet",
     "lint": "eslint --ext .jsx --ext .js src",
     "lint-fix": "npm run lint -- --fix",
-    "precommit": "lint-staged"
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
   },
   "lint-staged": {
     "*.{js, jsx}": [
@@ -80,7 +85,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Shilza/Shopper.git"
+    "url": "https://github.com/shilza/shopper"
   },
   "keywords": [
     "React"
@@ -90,5 +95,5 @@
   "bugs": {
     "url": "https://github.com/Shilza/Shopper/issues"
   },
-  "homepage": "https://github.com/Shilza/Shopper#readme"
+  "homepage": "https://shilza.github.io/shopper"
 }
