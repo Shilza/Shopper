@@ -2,11 +2,13 @@ import styled from 'styled-components';
 import React from 'react';
 
 const StyledDeliveryLabel = styled.div`
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: black;
     color: white;
-    padding: 10px 0 10px 0;
-    font-size: 0.8em;
+    padding: 12px 0;
+    font-size: 0.9em;
     font-weight: normal;
 `;
 

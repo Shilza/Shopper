@@ -61,27 +61,27 @@ const ShopperStyleImage = styled.img`
 
 const images = [
     'https://z1photorankmedia-a.akamaihd.net/media/6/v/g/6vg9fg4/normal.jpg',
-    'https://z3photorankmedia-a.akamaihd.net/media/s/u/g/sug9fg4/mobile.jpg',
+    'https://z2photorankmedia-a.akamaihd.net/media/3/2/8/328wqg4/mobile.jpg',
     'https://photorankmedia-a.akamaihd.net/media/e/p/g/epg9fg4/mobile.jpg',
     'https://z2photorankmedia-a.akamaihd.net/media/a/s/g/asg9fg4/mobile.jpg',
     'https://z2photorankmedia-a.akamaihd.net/media/i/q/g/iqg9fg4/mobile.jpg',
     'https://photorankmedia-a.akamaihd.net/media/p/8/h/p8hhcg4/mobile.jpg',
     'https://z3photorankmedia-a.akamaihd.net/media/2/x/g/2xghcg4/mobile.jpg',
     'https://photorankmedia-a.akamaihd.net/media/e/6/h/e6hhcg4/mobile.jpg',
-    'https://z2photorankmedia-a.akamaihd.net/media/h/p/g/hpghcg4/mobile.jpg'
+    'https://photorankmedia-a.akamaihd.net/media/6/p/j/6pj2tg4/mobile.jpg'
 ];
 
 const renderImages = (image, index) => {
     if (index === 0)
         return (
-            <MainImage>
+            <MainImage key={index}>
                 <ShopperStyleImage src={image} />
                 <ImageDarkenerButton>Buy now</ImageDarkenerButton>
             </MainImage>
         );
 
     return (
-        <div>
+        <div key={index}>
             <ShopperStyleImage src={image} />
             <ImageDarkenerButton>Buy now</ImageDarkenerButton>
         </div>

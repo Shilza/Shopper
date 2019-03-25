@@ -23,12 +23,12 @@ const MediaLink = styled.a`
     }
 `;
 
-type IconPropTypes = {
+type PropTypes = {
     className: string,
     href: string
 };
 
-const Icon = ({ className, href }: IconPropTypes) => (
+const Icon = ({ className, href }: PropTypes) => (
     <div>
         <MediaLink href={href} className={className} />
     </div>

@@ -1,17 +1,10 @@
-/* eslint-disable max-len */
+// @flow
+/* eslint-disable max-len,prettier/prettier */
 import React from 'react';
 import styled from 'styled-components';
-
-const StyledImagesContainer = styled.div`
-    position: relative;
-    display: flex;
-
-    img {
-        height: 10%;
-        flex: 1;
-        width: ${props => 100 / props.scale}%;
-    }
-`;
+import MediaQuery from 'react-responsive';
+import { Link } from 'react-router-dom';
+import StyledImagesContainer from './StyledImagesContainer';
 
 const BuyButtonContainer = styled.div`
     position: absolute;
@@ -25,7 +18,7 @@ const BuyButtonContainer = styled.div`
     top: 0;
 `;
 
-const BuyButton = styled.button`
+const BuyButton = styled(Link)`
     outline: none;
     border: none;
     background: #fff;
@@ -34,6 +27,13 @@ const BuyButton = styled.button`
     text-transform: uppercase;
     padding: 8px 20px 8px 20px;
     transition: 300ms;
+    text-decoration: none;
+    max-width: 5%;
+    min-width: 80px;
+    max-height: 2%;
+    min-height: 20px;
+    color: black;
+    text-align: center;
 
     &:hover {
         color: #fff;
@@ -41,36 +41,51 @@ const BuyButton = styled.button`
     }
 `;
 
-const ImagesContainer = () => (
+type Image = {
+    id: number,
+    src: string
+};
+
+type PropTypes = {
+    images: Array<Image>
+};
+
+const ImagesContainer = ({ images }: PropTypes) => (
     <>
         <StyledImagesContainer scale={2}>
-            <img
-                src="https://static.bershka.net/4/photos2/2019/V/0/1/p/2888/388/712/2888388712_1_1_4.jpg?t=15513676409091"
-                alt=""
-            />
-            <img
-                src="https://static.bershka.net/4/photos2/2019/V/0/1/p/5252/019/743/5252019743_1_1_4.jpg?t=15513676421311"
-                alt=""
-            />
+                <img
+                    src={images[0].src}
+                    alt=""
+                />
+            <MediaQuery minWidth={768}>
+                    <img
+                        src={images[1].src}
+                        alt=""
+                    />
+            </MediaQuery>
             <BuyButtonContainer>
-                <BuyButton>Buy now</BuyButton>
+                <BuyButton to={`/product/${images[0].id}`}>Buy now</BuyButton>
             </BuyButtonContainer>
         </StyledImagesContainer>
         <StyledImagesContainer scale={3}>
-            <img
-                src="https://static.bershka.net/4/photos2/2019/V/0/1/p/1938/151/807/1938151807_1_1_4.jpg?t=15468742346501"
-                alt=""
-            />
-            <img
-                src="https://static.bershka.net/4/photos2/2019/V/0/1/p/1938/151/807/1938151807_2_3_4.jpg?t=15468742346501"
-                alt=""
-            />
-            <img
-                src="https://static.bershka.net/4/photos2/2019/V/0/1/p/1938/151/807/1938151807_2_1_4.jpg?t=15468742346501"
-                alt=""
-            />
+            <MediaQuery minWidth={768}>
+                    <img
+                        src={images[2].src}
+                        alt=""
+                    />
+            </MediaQuery>
+                <img
+                    src={images[3].src}
+                    alt=""
+                />
+            <MediaQuery minWidth={768}>
+                <img
+                    src={images[4].src}
+                    alt=""
+                />
+            </MediaQuery>
             <BuyButtonContainer>
-                <BuyButton>Buy now</BuyButton>
+                <BuyButton to={`/product/${images[3].id}`}>Buy now</BuyButton>
             </BuyButtonContainer>
         </StyledImagesContainer>
     </>

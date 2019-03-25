@@ -1,16 +1,14 @@
-import React from 'react';
-import SubHeader from '../../components/SubHeader/SubHeader';
+/* eslint-disable react/prop-types */
+import * as React from 'react';
 import IndexDeliveryLabel from './IndexDeliveryLabel';
-import ImagesContainer from './ImagesContainer';
 import ShopperStyle from './ShopperStyle/ShopperStyle';
 import HelpContainer from './HelpContainer';
 import SocialMedia from './SocialMedia';
 
-const Index = () => (
+const Index = ({ children }) => (
     <div>
-        <SubHeader />
         <IndexDeliveryLabel />
-        <ImagesContainer />
+        {children}
         <ShopperStyle />
         <HelpContainer />
         <SocialMedia />
