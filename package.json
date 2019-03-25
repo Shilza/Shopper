@@ -2,7 +2,7 @@
   "name": "Shopper",
   "version": "1.0.0",
   "description": "Shopper custom configuration project",
-  "main": "index.js",
+  "main": "index.html",
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.3.4",
     "@babel/plugin-proposal-decorators": "^7.3.0",
@@ -74,7 +74,7 @@
     "lint": "eslint --ext .jsx --ext .js src",
     "lint-fix": "npm run lint -- --fix",
     "predeploy": "yarn run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d public"
   },
   "lint-staged": {
     "*.{js, jsx}": [

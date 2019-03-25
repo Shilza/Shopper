@@ -21,7 +21,7 @@ module.exports = (env, options) => {
             path: PATHS.dist,
             filename: '[name].[hash:8].bundle.js',
             chunkFilename: '[name].[hash:8].bundle.js',
-            publicPath: '/'
+            publicPath: './'
         },
         module: {
             rules: [
