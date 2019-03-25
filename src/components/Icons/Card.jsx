@@ -3,8 +3,6 @@ import styled from 'styled-components';
 const Card = styled.div`
     color: #000;
     position: relative;
-    margin-left: 2px;
-    margin-top: 4px;
     width: 15px;
     height: 10px;
     border-radius: 1px;

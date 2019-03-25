@@ -1,15 +1,16 @@
 import styled from 'styled-components';
 
-const Heart = styled.div`
+const Heart = styled.div.attrs(({ background }) => ({
+    background: background || 'transparent'
+}))`
     color: #000;
-    margin-top: 6px;
-    margin-left: 5px;
     width: 9px;
     height: 9px;
     border-left: solid 1px currentColor;
     border-bottom: solid 1px currentColor;
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
+    background: ${props => props.background}
 
     :before {
         content: '';
@@ -22,6 +23,7 @@ const Heart = styled.div`
         border-top: solid 1px currentColor;
         border-left: solid 1px currentColor;
         border-right: solid 1px currentColor;
+         background: ${props => props.background}
     }
 
     :after {
@@ -35,6 +37,7 @@ const Heart = styled.div`
         border-top: solid 1px currentColor;
         border-right: solid 1px currentColor;
         border-bottom: solid 1px currentColor;
+         background: ${props => props.background}
     }
 `;
 
