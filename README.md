@@ -1,5 +1,5 @@
 # Shopper
-ReactJS e-commerce project
+ReactJS e-commerce project. View [Demo](https://shilza.github.io/Shopper)
 
 ## Install & setup
 
