@@ -1,6 +1,8 @@
 /* eslint-disable max-len */
 import React from 'react';
 import styled from 'styled-components';
+import womanNeon from '../../../images/collections/womanNeon.jpg';
+import womanSweatshirts from '../../../images/collections/womanSweatshirts.jpg';
 
 const ImagesContainer = styled.div`
     display: flex;
@@ -12,15 +14,12 @@ const ImagesContainer = styled.div`
     }
 `;
 
-const images = [
-    'https://static.bershka.net/4/static/itxwebstandard/category_images/woman/content/WOMAN_NEON.jpg?20190306024500',
-    'https://static.bershka.net/4/static/itxwebstandard/category_images/woman/content/WOMAN_SWEATSHIRTS.jpg?20190306024500'
-];
+const images = [womanNeon, womanSweatshirts];
 
 const ImagesBlock = () => (
     <ImagesContainer>
         <img src={images[0]} alt="Neon" />
-        <img src={images[1]} alt="Neon" />
+        <img src={images[1]} alt="SweatShirts" />
     </ImagesContainer>
 );
 

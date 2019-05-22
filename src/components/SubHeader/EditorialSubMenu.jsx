@@ -1,21 +1,21 @@
 /* eslint-disable max-len */
 import React from 'react';
+import undress from '../../images/editorial/undress.jpg';
+import campaign from '../../images/editorial/campaign.jpg';
+import splash from '../../images/editorial/splash.jpg';
 import OneLineList from './OneLineList';
 
 const items = [
     {
-        src:
-            'https://static.bershka.net/4/static/itxwebstandard/category_images/editorial/UNDRESS.jpg?20190306024500',
+        src: undress,
         text: 'Undress to Dress'
     },
     {
-        src:
-            'https://static.bershka.net/4/static/itxwebstandard/category_images/editorial/CAMPAIGN_SS19.jpg?20190306024500',
+        src: campaign,
         text: 'Campaign SS19'
     },
     {
-        src:
-            'https://static.bershka.net/4/static/itxwebstandard/category_images/editorial/MAKE_A_SPLASH.jpg?20190306024500',
+        src: splash,
         text: 'Make a Splash'
     }
 ];

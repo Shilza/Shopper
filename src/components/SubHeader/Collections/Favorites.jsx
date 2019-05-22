@@ -1,21 +1,22 @@
 /* eslint-disable max-len */
 import React from 'react';
+import novetly from '../../../images/collections/novetly.jpg';
+import bestsellers from '../../../images/collections/bestsellers.jpg';
+import comingSoon from '../../../images/collections/comingSoon.jpg';
+import accessories from '../../../images/collections/accessories.jpg';
 import Stack from './Stack';
 
 const images = [
     {
-        src:
-            'https://static.bershka.net/4/static/itxwebstandard/category_images/woman/thumbnail/1010195501.jpg?20190306024500',
+        src: novetly,
         text: 'Novetly'
     },
     {
-        src:
-            'https://static.bershka.net/4/static/itxwebstandard/category_images/woman/thumbnail/1010281014.jpg?20190306024500',
+        src: bestsellers,
         text: 'BestSellers ⭐'
     },
     {
-        src:
-            'https://static.bershka.net/4/static/itxwebstandard/category_images/woman/thumbnail/1010221018.jpg?20190306024500',
+        src: comingSoon,
         text: 'Coming soon'
     },
     {
@@ -24,8 +25,7 @@ const images = [
         text: 'Footwear'
     },
     {
-        src:
-            'https://static.bershka.net/4/static/itxwebstandard/category_images/woman/thumbnail/1010352020.jpg?20190306024500',
+        src: accessories,
         text: 'Accessories'
     }
 ];

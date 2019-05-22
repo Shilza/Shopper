@@ -1,31 +1,31 @@
 /* eslint-disable react/no-array-index-key,max-len */
 import React from 'react';
+import eveningCollection from '../../../images/collections/eveningCollection.jpg';
+import denim from '../../../images/collections/denim.jpg';
+import neonMood from '../../../images/collections/neonMood.jpg';
+import movie from '../../../images/collections/movie.jpg';
+import joinLife from '../../../images/collections/joinLife.jpg';
 import Stack from './Stack';
 
 const collections = [
     {
-        src:
-            'https://static.bershka.net/4/static/itxwebstandard/category_images/woman/thumbnail/1010193229.jpg?20190306024500',
+        src: denim,
         text: 'Denim collection'
     },
     {
-        src:
-            'https://static.bershka.net/4/static/itxwebstandard/category_images/woman/thumbnail/1010193228.jpg?20190306024500',
+        src: eveningCollection,
         text: 'Evening collection'
     },
     {
-        src:
-            'https://static.bershka.net/4/static/itxwebstandard/category_images/woman/thumbnail/1010352017.jpg?20190306024500',
+        src: neonMood,
         text: 'Neon mood'
     },
     {
-        src:
-            'https://static.bershka.net/4/static/itxwebstandard/category_images/woman/thumbnail/1010310507.jpg?20190306024500',
+        src: movie,
         text: 'Movie and music strs'
     },
     {
-        src:
-            'https://static.bershka.net/4/static/itxwebstandard/category_images/woman/thumbnail/1010319011.jpg?20190306024500',
+        src: joinLife,
         text: 'Collection "Join life"'
     }
 ];
