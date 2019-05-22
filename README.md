@@ -16,7 +16,7 @@ ReactJS e-commerce project. View [Demo](https://shilza.github.io/Shopper)
 * Webpack
 * FlowJS
 
-## Shuttle inside
+## Shopper inside
 This section shows the Shopper user interface on mobile devices
 
 #### Index page
